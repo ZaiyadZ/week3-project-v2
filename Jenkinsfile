@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        GCR_CREDENTIALS_ID = 'team5-jenkins-pipes' // The ID you provided in Jenkins credentials
+        GCR_CREDENTIALS_ID = 'team5-gcr' // The ID you provided in Jenkins credentials
         IMAGE_NAME = 'test-image-5'
-        GCR_URL = 'gcr.io/europe-west1-docker.pkg.dev/lbg-mea-20/zaiyad-docker-repo'
+        GCR_URL = 'europe-west1-docker.pkg.dev/lbg-mea-20/zaiyad-docker-repo'
     }
     stages {
         stage('Build and Push to GCR') {
